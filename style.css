@@ -12,121 +12,205 @@ body {
 
 .container {
     max-width: 1000px;
-    margin: auto;
-    background: rgb(39, 34, 34);
-    padding: 20px;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(180deg, #e6f5ea 0%, #dceddf 100%);
+    padding: 24px;
+    color: #111827;
     border-radius: 10px;
 }
 
-h1 {
-    margin-bottom: 20px;
-    color: rgb(203, 71, 71);
-}
+--card-bg: #0f1724;
+--accent: #b3333a;
+--muted: #f8f8f8;
+max-width: 1000px;
+margin: 0 auto;
+background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+padding: 22px;
+border-radius: 12px;
+box-shadow: 0 6px 24px rgba(15, 23, 36, 0.08);
 
 .habit-input {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
-}
+    margin-bottom: 18px;
+    color: #0b1320;
+    font-size: 1.6rem;
+    font-weight: 600;
 
-.habit-input input {
-    flex: 1;
-    padding: 10px;
-}
+    .habit-input input {
+        flex: 1;
+        display: flex;
+        gap: 12px;
+        margin-bottom: 18px;
 
-.habit-input {
-    display: flex;
-    gap: 10px;
-}
+        .habit-input {
+            display: flex;
+            gap: 10px;
+            flex: 1;
+            padding: 10px 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(11, 19, 32, 0.08);
+            background: white;
+            font-size: 0.98rem;
 
-.week-controls {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-}
+            .week-controls {
+                display: flex;
+                gap: 10px;
+                display: flex;
+                gap: 12px;
 
-.week-controls button {
-    padding: 10px;
-    cursor: pointer;
-}
+                .week-controls button {
+                    padding: 10px;
+                    display: flex;
+                    gap: 10px;
+                    margin-bottom: 14px;
 
-.table-wrapper {
-    overflow-x: auto;
-}
+                    .table-wrapper {
+                        overflow-x: auto;
+                    }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
+                    padding: 8px 12px;
+                    cursor: pointer;
+                    border-radius: 8px;
+                    border: 1px solid rgba(11, 19, 32, 0.06);
+                    background: #ffffff;
+                    transition: transform 120ms ease,
+                    box-shadow 120ms ease;
+                    width: 100%;
 
-th,
-td {
-    border: 1px solid #fffcfc;
-    padding: 12px;
-    text-align: center;
-}
+                    .week-controls button:hover {
+                        transform: translateY(-1px);
+                        box-shadow: 0 6px 12px rgba(11, 19, 32, 0.06)
+                    }
 
-th {
-    background: #b3333a;
-}
+                    .primary-btn {
+                        background: var(--accent);
+                        color: #fff;
+                        border-color: transparent
+                    }
 
-.today {
-    background: #ffffff;
-}
+                    border-collapse: collapse;
+                }
 
-.check-btn {
-    cursor: pointer;
-    font-size: 18px;
-}
+                th,
+                td {
+                    border: 1px solid #fffcfc;
+                    width: 100%;
+                    border-collapse: collapse;
+                    background: transparent;
+                    min-width: 760px;
+                }
 
-.delete-btn {
-    background: red;
-    color: white;
-    border: none;
-    padding: 6px 10px;
-    cursor: pointer;
-}
+                th {
+                    background: #b3333a;
+                    border: 1px solid rgba(11, 19, 32, 0.06);
+                    padding: 12px 10px;
+                    text-align: center;
+                    vertical-align: middle;
+                    background: #ffffff;
+                }
 
-.edit-btn {
-    padding: 6px 10px;
-    cursor: pointer;
-}
+                background: linear-gradient(180deg, #f3f4f6, #eef2f7);
+                color: #0b1320;
+                font-weight: 600;
+                cursor: pointer;
+                font-size: 18px;
+            }
 
-#emptyState {
-    padding: 20px;
-    text-align: center;
-    color: rgb(255, 248, 248);
-}
+            background: #fff6d6;
 
-button:focus {
-    outline: 2px solid black;
-}
+            .delete-btn {
+                background: red;
+                color: white;
+                border: none;
+                padding: 6px 10px;
+                cursor: pointer;
+            }
 
-.today {
-    background-color: #ffeaa7;
-}
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 6px 10px;
+            cursor: pointer;
+            border-radius: 6px;
 
-.table-wrapper {
-    overflow-x: auto;
-}
+            #emptyState {
+                padding: 20px;
+                text-align: center;
+                padding: 6px 10px;
+                cursor: pointer;
+                border-radius: 6px;
+                background: #f3f4f6;
+                border: 1px solid rgba(11, 19, 32, 0.04);
 
-@media (max-width: 600px) {
-    .habit-input {
-        flex-direction: column;
-    }
+                button:focus {
+                    outline: 2px solid black;
+                }
 
-.week-controls {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-    button {
-        width: 100%;
-    }
+                color: #334155;
+                background-color: #ffeaa7;
+                color: black;
+            }
 
-    th,
-    td {
-        padding: 8px;
-        font-size: 14px;
-    }
-}
+            .table-wrapper {
+                overflow-x: auto;
+            }
+
+            @media (max-width: 600px) {
+
+                .day-cell {
+                    cursor: pointer
+                }
+
+                .streak {
+                    font-weight: 600;
+                    color: #dc2626
+                }
+
+                .actions {
+                    display: flex;
+                    gap: 6px;
+                    justify-content: center
+                }
+
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border: 0
+                }
+
+                .week-controls {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+
+                button {
+                    width: 100%;
+                }
+
+                th,
+                td {
+                    border: 1px solid #fffcfc;
+                    padding: 12px;
+                    text-align: center;
+                    color: white;
+                }
+            }
+
+            td:first-child {
+                font-weight: bold;
+                text-align: left;
+            }
+
+            button {
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+            }
