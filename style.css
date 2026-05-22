@@ -34,9 +34,9 @@ h1 {
     padding: 10px;
 }
 
-.habit-input button {
-    padding: 10px 16px;
-    cursor: pointer;
+.habit-input {
+    display: flex;
+    gap: 10px;
 }
 
 .week-controls {
@@ -105,6 +105,28 @@ button:focus {
 .today {
     background-color: #ffeaa7;
 }
+
 .table-wrapper {
     overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+    .habit-input {
+        flex-direction: column;
+    }
+
+.week-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+    button {
+        width: 100%;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 14px;
+    }
 }

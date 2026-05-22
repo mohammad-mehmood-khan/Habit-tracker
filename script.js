@@ -278,9 +278,3 @@ function formatDate(date) {
   return date.toISOString().split("T")[0];
 }
 const dates = getWeekDates();
-
-console.log(
-  dates.map(function (date) {
-    return formatDate(date);
-  }),
-);
