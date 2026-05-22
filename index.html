@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habit Tracker</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Habit Tracker</h1>
+
+    <div class="habit-input">
+      <input type="text" id="habitInput" placeholder="Enter a habit" />
+      <button id="addHabitBtn">Add Habit</button>
+    </div>
+
+    <div class="week-controls">
+      <button id="prevWeekBtn">Previous</button>
+      <button id="todayBtn">This Week</button>
+      <button id="nextWeekBtn">Next</button>
+    </div>
+
+    <div id="emptyState">No habits yet. Add your first habit!</div>
+
+    <div class="table-wrapper">
+      <table id="habitTable">
+        <thead>
+          <tr>
+            <th>Habit</th>
+
+            <th id="monHeader" class="day-header" data-day="mon">
+              Mon
+            </th>
+
+            <th id="tueHeader" class="day-header" data-day="tue">
+              Tue
+            </th>
+
+            <th id="wedHeader" class="day-header" data-day="wed">
+              Wed
+            </th>
+
+            <th id="thuHeader" class="day-header" data-day="thu">
+              Thu
+            </th>
+
+            <th id="friHeader" class="day-header" data-day="fri">
+              Fri
+            </th>
+
+            <th id="satHeader" class="day-header" data-day="sat">
+              Sat
+            </th>
+
+            <th id="sunHeader" class="day-header" data-day="sun">
+              Sun
+            </th>
+            <th>Streak</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody id="habitBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

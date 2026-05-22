@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #2b6b2d;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: rgb(39, 34, 34);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: rgb(203, 71, 71);
+}
+
+.habit-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.habit-input input {
+    flex: 1;
+    padding: 10px;
+}
+
+.habit-input button {
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.week-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.week-controls button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #fffcfc;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #b3333a;
+}
+
+.today {
+    background: #ffffff;
+}
+
+.check-btn {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.delete-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+#emptyState {
+    padding: 20px;
+    text-align: center;
+    color: rgb(255, 248, 248);
+}
+
+button:focus {
+    outline: 2px solid black;
+}
+
+.today {
+    background-color: #ffeaa7;
+}
